@@ -1,0 +1,71 @@
+@import "def";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+a:link, a:visited, a[href] {
+  color: $global-color-concept;
+  text-decoration: none;
+  transition-duration: 175ms;
+  transition-property: color;
+
+  &:hover {
+    color: darken($global-color-concept, 5%);
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: darken($global-color-concept, 10%);
+  }
+}
+
+body {
+  @include flex(column, stretch, flex-start, 1rem);
+  min-height: 100%;
+  background-color: $global-background-color;
+  color: $global-text-color;
+  cursor: default;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: initial;
+  padding: 1.5rem;
+  user-select: none;
+}
+
+button, input, select, textarea {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: initial;
+  margin-block: initial;
+  margin-inline: initial;
+  outline: none;
+  padding: initial;
+  padding-block: initial;
+  padding-inline: initial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: inherit;
+  margin-block: initial;
+  margin-inline: initial;
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+ol, ul {
+  list-style-type: none;
+  margin-block: 0;
+  padding-inline: 0;
+}
