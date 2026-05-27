@@ -30,4 +30,20 @@ $global-sub-nav-background-color : #BFDBFE;
 $global-gray-overlay-color : #D9D9D9;
 $global-black-overlay-color : #000000;
 
+@mixin flex($flex-direction, $align-items, $justify-content, $gap: 0) {
+  align-items: $align-items;
+  display: flex;
+  flex-direction: $flex-direction;
+  gap: $gap;
+  justify-content: $justify-content;
 
+  > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  > .-flex-stretch {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}

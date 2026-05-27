@@ -1,38 +1,145 @@
 @import "def";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+//font
+//logo
+@font-face {
+  font-family: 'KerisKedyuche';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_R.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KerisKedyuche';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_B.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+//프리텐다드
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+//지마켓산스
+@font-face {
+  font-family: 'GMarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GMarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GMarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
 
 a:link, a:visited, a[href] {
-  color: $global-color-concept;
+  color: $global-white-text-color;
   text-decoration: none;
   transition-duration: 175ms;
   transition-property: color;
 
   &:hover {
-    color: darken($global-color-concept, 5%);
+    color: darken($global-white-text-color, 5%);
     text-decoration: underline;
   }
 
   &:active {
-    color: darken($global-color-concept, 10%);
+    color: darken($global-white-text-color, 10%);
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  @include flex(column, stretch, flex-start, 1rem);
+  @include flex(column, stretch, flex-start);
+  width: 100%;
   min-height: 100%;
-  background-color: $global-background-color;
+  flex: 1;
+  background-color: $global-main-background-color;
   color: $global-text-color;
   cursor: default;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: 'GMarketSans', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 0.95rem;
   font-weight: 400;
   line-height: 1;
   margin: initial;
-  padding: 1.5rem;
   user-select: none;
 }
 
@@ -68,4 +175,212 @@ ol, ul {
   list-style-type: none;
   margin-block: 0;
   padding-inline: 0;
+}
+
+
+
+
+
+.footer {
+  @include flex(row, center, center, 5rem);
+  background-color: lighten($global-sub-nav-background-color, 10%);
+  padding: 2rem;
+  margin-top: auto;
+
+  .divider {
+    width: 0.0625rem;
+    background-color: #ccc;
+    align-self: stretch;
+  }
+
+  .media-wrapper {
+    @include flex(row, center, center, 5rem);
+
+    .cs-wrapper {
+      @include flex(column, flex-start, center);
+
+      .service-center {
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding-bottom: 0.5rem;
+        cursor: pointer;
+        color: $global-text-color;
+
+        &:hover{
+          color: darken($global-text-color, 20%);
+        }
+      }
+
+      .cs-method {
+        @include flex(row, flex-start, flex-start, 0.5rem);
+        padding-bottom: 0.5rem;
+
+        .service-num,
+        .service-email {
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: $global-text-color;
+        }
+
+        .method-divider {
+          width: 0.0625rem;
+          height: 0.8rem;
+          background-color: #ccc;
+          padding-top: 1rem;
+        }
+      }
+
+      .info-list {
+        @include flex(column, flex-start, center, 0.3rem);
+        list-style-type: disc;
+        padding-left: 1rem;
+
+        .item {
+          font-size: 0.8rem;
+          color: $global-text-color;
+        }
+      }
+    }
+
+    .terms-wrapper {
+      .terms {
+        @include flex(column, flex-start, center, 1rem);
+
+        .service,
+        .security {
+          cursor: pointer;
+          color: $global-text-color;
+          font-size: 0.9rem;
+
+          &:hover{
+            color: darken($global-text-color, 20%);
+          }
+        }
+      }
+    }
+  }
+
+  .compony-wrapper {
+    @include flex(column, flex-start, center, 1rem);
+
+    .info {
+      @include flex(column, flex-start, center, 0.5rem);
+
+      .compony-info {
+        @include flex(row, flex-start, center, 0.5rem);
+        color: $global-text-color;
+        font-size: 0.9rem;
+
+        .info-divider {
+          width: 0.0625rem;
+          height: 0.8rem;
+          background-color: #ccc;
+          padding-top: 1rem;
+        }
+      }
+
+      .compony-content {
+        @include flex(row, flex-start, center, 0.5rem);
+        color: $global-text-color;
+        font-size: 0.85rem;
+
+        .info-divider {
+          width: 0.0625rem;
+          height: 0.8rem;
+          background-color: #ccc;
+          padding-top: 1rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      .sub-item {
+        font-size: 0.8rem;
+        color: $global-text-color;
+      }
+
+      .sub-copy {
+        font-size: 0.7rem;
+        color: lighten($global-text-color, 20%);
+      }
+    }
+  }
+
+  @media (max-width: 1229px) {
+    @include flex(column, flex-start, flex-start, 1rem);
+
+    > .divider {
+      width: 100%;
+      height: 0.0625rem;
+      align-self: stretch;
+    }
+
+    .media-wrapper {
+      gap: 2rem;
+    }
+
+    .compony-wrapper .info {
+      gap: 0.3rem;
+
+      .compony-info,
+      .compony-content {
+        display: block;
+        line-height: 1;
+
+
+        .item, .info-divider {
+          display: inline;
+        }
+      }
+
+      .sub-item{
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.top-nav {
+  @include flex(column, stertch, flex-start, 1rem);
+  min-width: 100%;
+  padding: 1.5rem 0 0;
+  background-color: $global-white-background-color;
+  border-bottom: 0.1rem solid lighten($global-gray-border-color, 10%);
+
+  > .inner{
+    @include flex(column, stertch, center, 1.5rem);
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+
+    > .top {
+      @include flex(row, center, space-between);
+
+      > .logo{
+        font-size: 2rem;
+        font-family: 'KerisKedyuche';
+        font-weight: 700;
+        color: $global-blue-text-color;
+      }
+
+      img{
+        display: none;
+      }
+    }
+
+    > .menu {
+      @include flex(row, center, flex-start);
+      font-size: 1.2rem;
+
+      > .item {
+        @include flex(column, stretch, flex-start);
+        padding: 0.5rem 1.2rem 0.75rem 1.2rem;
+        border-bottom: 0.17rem solid transparent;
+
+        &.active {
+          font-weight: 700;
+          border-bottom: 0.17rem solid $global-blue-border-color;
+        }
+      }
+    }
+  }
 }

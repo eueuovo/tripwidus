@@ -1,0 +1,20 @@
+.content {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+  flex: 1;
+  padding: 1rem;
+  background-color: #FFFFFF; }
+  .content > * {
+    flex-grow: 0;
+    flex-shrink: 0; }
+  .content > .-flex-stretch {
+    flex-grow: 1;
+    flex-shrink: 1; }
+
+/*# sourceMappingURL=main.css.map */

@@ -5,8 +5,20 @@
     <title>Document</title>
 </head>
 <body>
-<nav id="topNavigator">
-
+<nav class="top-nav" th:fragment="topNavigator">
+    <div class="inner">
+        <div class="top">
+            <div class="logo">Tripwidus</div>
+            <div class="login">Login</div>
+            <img class="profile" src="" alt="">
+        </div>
+        <div class="menu">
+            <div class="item">🏠 홈</div>
+            <div class="item active">📆 내 여행</div>
+            <div class="item">️️🗺 장소 검색</div>
+            <div class="item">📜 여행자들의 기록</div>
+        </div>
+    </div>
 </nav>
 </body>
 </html>
