@@ -8,22 +8,28 @@
   flex: 1;
   padding: 1rem;
   background-color: $global-white-background-color;
-}
 
-.sub-menu{
-  @include flex(row, center, flex-start, 1rem);
+  .sub-menu{
+    @include flex(row, center, flex-start, 1rem);
 
-  > .item {
-    cursor: pointer;
+    > .item {
+      cursor: pointer;
+    }
+
+    > .item:hover,
+    > .item.active{
+      color: $global-blue-text-color;
+    }
   }
 
-  > .item:hover,
-  > .item.active{
-    color: $global-blue-text-color;
+  #tab-culture{
+    display: none;
+  }
+
+  .map-section {
+    .map {
+      width: 100%;
+      height: 400px;
+    }
   }
 }
-
-#tab-culture{
-  display: none;
-}
-

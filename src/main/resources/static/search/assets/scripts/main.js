@@ -11,4 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.tab-content')[idx].style.display = 'block';
         });
     });
+
+    kakao.maps.load(() => {
+        const container = document.querySelector('.map');
+        const options = {
+            center: new kakao.maps.LatLng(35.8714, 128.6014),
+            level: 3
+        };
+        const map = new kakao.maps.Map(container, options);
+    });
 });
