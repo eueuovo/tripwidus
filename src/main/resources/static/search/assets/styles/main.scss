@@ -9,6 +9,7 @@
   padding: 1rem;
   background-color: $global-white-background-color;
 
+  //서브메뉴
   .sub-menu{
     @include flex(row, center, flex-start, 1rem);
 
@@ -22,14 +23,51 @@
     }
   }
 
+  //문화행사 active
   #tab-culture{
     display: none;
   }
 
-  .map-section {
-    .map {
-      width: 100%;
-      height: 400px;
+  //탐색 active
+  #tab-search{
+    @include flex(column, flex-start, center, 1rem);
+
+    .place-search{
+      @include flex(column, flex-start, center, 1rem);
+      min-width: 100%;
+
+      .title{
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .place {
+        @include flex(row, flex-start, center, 1rem);
+        min-width: 100%;
+
+        .search-section {
+          flex: 1.5;
+          min-width: 200px;
+        }
+
+        .map-section {
+          flex: 3.5;
+          min-width: 300px;
+          position: relative;
+
+          .filter{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+          }
+
+          .map {
+            width: 100%;
+            height: 400px;
+          }
+        }
+      }
     }
   }
 }
