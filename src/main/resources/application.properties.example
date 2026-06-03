@@ -1,9 +1,9 @@
 spring.application.name=tripwidus
 
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
-spring.datasource.url=jdbc:mariadb://localhost:3306/
-spring.datasource.username=root
-spring.datasource.password=test1234
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
 
 spring.thymeleaf.cache=false
 
@@ -12,4 +12,4 @@ mybatis.mapper-locations=classpath:/mappers/**/*.xml
 spring.thymeleaf.prefix=classpath:/templates/
 spring.thymeleaf.suffix=.html
 
-kakao.map.key=56b71e0d94cab6b213914f3a9a793fab
+kakao.map.key=
